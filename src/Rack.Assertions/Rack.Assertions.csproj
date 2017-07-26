@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), build\Versions.props))\build\Versions.props" />
+
   <PropertyGroup>
     <TargetFrameworks>net45;netstandard1.0</TargetFrameworks>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
@@ -13,7 +13,6 @@
     <Authors>Ben Amodio</Authors>
     <Description>A no frills library for validating arguments.</Description>
     <Copyright>Copyright ©2017 Ben Amodio</Copyright>
-    <Version>1.0.0-alpha</Version>
     <PackageId>Rack.Assertions</PackageId>
     <PackageTags>assert guard ensure contract validation precondition</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/dotnetrack/assertions/master/nuget/icon.png</PackageIconUrl>
